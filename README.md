@@ -14,6 +14,7 @@ This project aims to create a password change page with a specific pattern that 
   - At least one numeric character (0-9)
   - Minimum length of 8 characters
 
+
 ## Usage
 
 To use this project, follow these steps:
@@ -25,5 +26,5 @@ To use this project, follow these steps:
 
 ## Credits
 
-This project was created by @shafraza. The design, colour scheme, and style of the page were inspired by a reference page provided.
+This project was created by @shafraza. The design, colour scheme, and style of the page were inspired by a reference page provided at 'assets/images/refrence-image.png'.
 
