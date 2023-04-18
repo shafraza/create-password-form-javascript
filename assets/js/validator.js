@@ -31,11 +31,15 @@ function passwordValidation(){
 function checkMatchCase(){
     const password = passwordInput.value;
     const  confirmPassword = confirmPasswordInput.value;
-    if(confirmPassword == password){
+    if(confirmPassword == password && password != ''){
         const passwordMatched = true;
         requirementUpdateResponse(passwordMatched,5);
         document.getElementById("submit-btn").disabled = false;
 
+    }else{
+        const passwordMatched = false;
+        requirementUpdateResponse(passwordMatched,5);
+        document.getElementById("submit-btn").disabled = true;
     }
 }
 function requirementUpdateResponse(requirementMet, validationIndex){
@@ -46,9 +50,15 @@ function requirementUpdateResponse(requirementMet, validationIndex){
     }else{
         validation_HTML_ElementObject.classList.remove("met");
         validation_HTML_ElementObject.classList.add("unmet");
+        document.getElementById("submit-btn").disabled = true;
+
     }
 }
 
 
 passwordInput.addEventListener('keyup', passwordValidation);
 confirmPasswordInput.addEventListener('keyup', checkMatchCase);
+passwordInput.addEventListener('mouseout', passwordValidation);
+confirmPasswordInput.addEventListener('mouseout', checkMatchCase);
+
+ 
